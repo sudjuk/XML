@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор Ozon</title>
+  <link rel="stylesheet" href="calculator.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="header">
+    <img src="logo_ozon_1.webp" alt="Ozon Logo" class="ozon-logo">
+    <button class="theme-toggle" onclick="toggleTheme()">Сменить тему</button>
+  </div>
+
+  <div class="wrapper">
+    <div class="calculator-container">
+      <div id="result" class="result">0</div>
+
+<div id="extra-buttons" class="hidden">
+  <div class="extra-row">
+    <button id="btn_extra_sin" class="my-btn extra-btn">sin</button>
+    <button id="btn_extra_cos" class="my-btn extra-btn">cos</button>
+    <button id="btn_extra_tan" class="my-btn extra-btn">tan</button>
+    <button id="btn_extra_factorial" class="my-btn extra-btn">x!</button>
+    <button id="btn_extra_square" class="my-btn extra-btn">x²</button>
+    <button id="btn_extra_sqrt" class="my-btn extra-btn">√x</button>
+  </div>
+</div>
+
+
+      <div class="buttons-grid">
+        <button id="btn_op_backspace" class="my-btn secondary">←</button>
+        <button id="btn_op_sign" class="my-btn secondary">+/-</button>
+        <button id="btn_op_percent" class="my-btn secondary">%</button>
+        <button id="btn_op_div" class="my-btn primary">/</button>
+      
+        <button id="btn_digit_7" class="my-btn">7</button>
+        <button id="btn_digit_8" class="my-btn">8</button>
+        <button id="btn_digit_9" class="my-btn">9</button>
+        <button id="btn_op_mult" class="my-btn primary">×</button>
+
+        <button id="btn_digit_4" class="my-btn">4</button>
+        <button id="btn_digit_5" class="my-btn">5</button>
+        <button id="btn_digit_6" class="my-btn">6</button>
+        <button id="btn_op_minus" class="my-btn primary">−</button>
+   
+        <button id="btn_digit_1" class="my-btn">1</button>
+        <button id="btn_digit_2" class="my-btn">2</button>
+        <button id="btn_digit_3" class="my-btn">3</button>
+        <button id="btn_op_plus" class="my-btn primary">+</button>
+
+        <button id="btn_toggle_extra" class="my-btn">fx</button>
+        <button id="btn_digit_0" class="my-btn">0</button>
+        <button id="btn_digit_dot" class="my-btn">.</button>
+        <button id="btn_op_equal" class="my-btn">=</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <a href="aboutme.html" class="github-link">
+      <button class="my-btn secondary">Обо мне</button>
+    </a>
+    <a href="aboutlab.html" class="github-link">
+      <button class="my-btn secondary">Лабораторная работа</button>
+    </a>
+  </footer>
+</body>
+</html>

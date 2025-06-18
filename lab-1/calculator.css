@@ -1,0 +1,263 @@
+
+body {
+  background: linear-gradient(135deg, #0066ff 0%, #ff2fee 100%);
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.calculator-container {
+  width: 295px;
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.calculator-container:hover {
+  transform: translateY(-5px);
+}
+
+.result {
+  width: 90%;
+  height: 70px;
+  margin-bottom: 15px;
+  padding-right: 15px;
+  background: #F4F7FB;
+  text-align: right;
+  color: #005BFF;
+  font-size: 2rem;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.my-btn {
+  margin: 5px;
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  border: none;
+  background: #005BFF;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.my-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,102,255,0.4);
+}
+
+.my-btn:active {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+.my-btn.primary {
+  background: #FF005C;
+}
+
+.my-btn.primary:hover {
+  background: #D4004A;
+}
+
+.my-btn.secondary {
+  background: #00C4FF;
+}
+
+.my-btn.secondary:hover {
+  background: #0094CC;
+}
+
+.my-btn.execute {
+  width: 130px;
+  border-radius: 15px;
+  background: #00C4FF;
+}
+
+.my-btn.execute:hover {
+  background: #0094CC;
+}
+
+.theme-toggle {
+  background: #0065FF;
+  color: white;
+  font-size: 1rem;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-left: 20px;
+}
+
+.theme-toggle:hover {
+  background: #004FCC;
+}
+
+.header {
+  background-color: rgba(255,255,255,0.9);
+  color: #1E1E1E;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  backdrop-filter: blur(8px);
+}
+
+.ozon-logo {
+  height: 30px;
+}
+
+.wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+.footer {
+  background-color: #005BFF;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 1rem;
+  border-top: 3px solid #FF005C;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+}
+
+.github-link .my-btn {
+  background-color: #24292F;
+  color: white;
+  font-size: 1rem;
+  width: auto;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.github-link .my-btn:hover {
+  background-color: #6CC644;
+}
+
+@media (max-width: 420px) {
+  .calculator-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .my-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .my-btn.execute {
+    width: 110px;
+  }
+}
+
+.dark-theme {
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a, #222222);
+  color: white;
+}
+
+.dark-theme .calculator-container {
+  background: #1e1e1e;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.dark-theme .result {
+  background: #252525;
+}
+
+.dark-theme .header {
+  background-color: rgba(34, 34, 34, 0.9);
+  color: white;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .footer {
+  background-color: rgba(34, 34, 34, 0.9);
+  border-top: 3px solid #ff005c;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+}
+
+.hidden {
+  display: none;
+}
+
+.extra-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  margin-bottom: 5px;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.extra-btn {
+  flex: 1;
+  font-size: 12px;
+  padding: 6px;
+  width: 100%;
+  max-width: 45px;
+  height: 40px;
+}
+
+
+.extra-row {
+  display: flex;
+  gap: 5px;
+}
+
+#extra-buttons.hidden {
+  display: none;
+}
+
+.back-button {
+  display: inline-block;
+  background: #00C4FF;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+  margin-top: 10px;
+}
+
+.back-button:hover {
+  background: #0094CC;
+  transform: scale(1.05);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh; /* Выравниваем контент по центру экрана */
+  text-align: center;
+  font-size: 1.2rem;
+  
+}
